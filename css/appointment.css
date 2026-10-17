@@ -1,0 +1,56 @@
+/* Appointment page */
+.appt-page{min-height:70vh;background:linear-gradient(180deg,var(--green-soft),var(--green-wash));padding:72px 0 96px}
+
+/* step 1: new or existing */
+.choose{max-width:760px;margin:0 auto;text-align:center}
+.choose h1{font-size:clamp(2rem,4.4vw,3.1rem);margin:14px 0 14px}
+.choose .lead{margin:0 auto 40px}
+.choose-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.choice{background:#fff;border:2px solid var(--line);border-radius:var(--radius);padding:40px 28px;cursor:pointer;font-family:inherit;color:var(--ink);text-align:center;transition:.25s;display:flex;flex-direction:column;align-items:center;gap:12px}
+.choice:hover,.choice:focus-visible{border-color:var(--green);transform:translateY(-6px);box-shadow:var(--shadow);outline:none}
+.choice .ic{width:64px;height:64px;border-radius:18px;background:var(--green-soft);color:var(--green-dark);display:grid;place-items:center}
+.choice .ic svg{width:30px;height:30px}
+.choice b{font-family:Fraunces,Georgia,serif;font-size:1.5rem;font-weight:600}
+.choice span{color:var(--muted);font-size:.95rem}
+.choice em{font-style:normal;font-weight:600;color:var(--green-dark);margin-top:6px}
+
+/* step 2: form */
+.book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.book-grid h1{font-size:clamp(2rem,4vw,3rem);margin:14px 0 16px}
+.who{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 6px 6px 18px;font-size:.9rem;font-weight:600;margin-bottom:22px}
+.who button{border:0;background:var(--green-soft);color:#35560a;font:600 .82rem Inter,sans-serif;padding:7px 14px;border-radius:999px;cursor:pointer}
+.who button:hover{background:var(--green)}
+.sessions{margin-top:30px;display:grid;gap:12px}
+.sess{display:flex;gap:14px;align-items:center;background:#fff;border-radius:16px;padding:16px 20px;border:1px solid var(--line)}
+.sess b{display:block}
+.sess span{font-size:.88rem;color:var(--muted)}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--green);flex:none}
+.call-row{margin-top:28px}
+form{background:#fff;border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form .full{grid-column:1/-1}
+label,.lbl{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--green-wash);color:var(--ink);transition:.15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green);background:#fff;box-shadow:0 0 0 4px rgba(122,181,29,.18)}
+textarea{resize:vertical;min-height:120px}
+.seg{display:flex;gap:10px}
+.seg label{flex:1;margin:0;text-transform:none;letter-spacing:0;font-size:.95rem;font-weight:500;color:var(--ink)}
+.seg input{position:absolute;opacity:0;width:0;height:0}
+.seg span{display:block;text-align:center;padding:13px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer;background:var(--green-wash)}
+.seg input:checked + span{background:var(--green);border-color:var(--green);font-weight:700;color:#1d2a05}
+.seg input:focus-visible + span{box-shadow:0 0 0 4px rgba(122,181,29,.3)}
+.note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:10px}
+.err{color:#b3261e;font-size:.82rem;margin-top:6px;display:none}
+.done{text-align:center;padding:50px 10px;grid-column:1/-1}
+.done h3{font-size:1.8rem;margin:16px 0 8px}
+.done p{color:var(--muted);max-width:42ch;margin:0 auto}
+.tick{width:64px;height:64px;border-radius:50%;background:var(--green);color:#1d2a05;font-size:2rem;font-weight:700;display:grid;place-items:center;margin:0 auto}
+[hidden]{display:none!important}
+
+@media(max-width:900px){
+  .book-grid{grid-template-columns:1fr;gap:40px}
+  .appt-page{padding:48px 0 80px}
+}
+@media(max-width:600px){
+  .choose-grid{grid-template-columns:1fr}
+  form{grid-template-columns:1fr;padding:24px}
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book an Appointment · Family Dental Care · Nashik Road</title>
+<meta name="description" content="Request an appointment at Family Dental Care, Nashik Road. Open Monday to Saturday, mornings and evenings.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/appointment.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="Family Dental Care — home"><img src="images/logo.png" alt="Family Dental Care"></a>
+    <nav class="site-nav" id="menu" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="appointment.html" aria-current="page">Appointment Booking</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+919175951978">091759 51978</a>
+      <a class="btn btn-primary" href="appointment.html">Book a visit</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="appt-page">
+  <div class="wrap">
+
+    <!-- STEP 1 -->
+    <section class="choose" id="stepChoose" style="padding:0">
+      <span class="eyebrow">Appointments</span>
+      <h1>Welcome. Have you visited us before?</h1>
+      <p class="lead">Choose one so that we can get you to the right place.</p>
+      <div class="choose-grid">
+        <button type="button" class="choice" data-type="new">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M19 3v4M17 5h4"/></svg></div>
+          <b>New patient</b>
+          <span>This is my first visit to Family Dental Care.</span>
+          <em>Continue →</em>
+        </button>
+        <button type="button" class="choice" data-type="existing">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M17 5l2 2 3-3"/></svg></div>
+          <b>Existing patient</b>
+          <span>I have been treated here before.</span>
+          <em>Continue →</em>
+        </button>
+      </div>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="book-grid" id="stepForm" hidden style="padding:0">
+      <div>
+        <div class="who"><span id="whoLabel">New patient</span><button type="button" id="changeWho">Change</button></div>
+        <span class="eyebrow" style="display:flex">Appointments</span>
+        <h1>Pick a day. We'll take care of the rest.</h1>
+        <p class="lead">Send a request and our front desk will confirm a time that suits you. Open Monday to Saturday — mornings 9:30 am to 2:30 pm and evenings 5:30 pm to 8:30 pm, with a dedicated 2:30–3:30 pm slot for senior citizens. Closed on Sundays.</p>
+        <div class="sessions">
+          <div class="sess"><span class="dot"></span><div><b>Morning session</b><span>9:30 am – 2:30 pm · Monday to Saturday</span></div></div>
+          <div class="sess"><span class="dot"></span><div><b>Evening session</b><span>5:30 pm – 8:30 pm · Monday to Saturday</span></div></div>
+          <div class="sess"><span class="dot"></span><div><b>Special hours for senior citizens</b><span>2:30 pm – 3:30 pm · Monday to Saturday</span></div></div>
+        </div>
+        <div class="btn-row call-row">
+          <a class="btn btn-dark" href="tel:+919175951978">Call 091759 51978</a>
+        </div>
+      </div>
+
+      <form id="apptForm">
+        <div><label for="name">Full name</label><input id="name" required placeholder="Your name" autocomplete="name"></div>
+        <div><label for="phone">Phone</label><input id="phone" type="tel" required placeholder="10-digit mobile" autocomplete="tel" inputmode="numeric"><div class="err" id="phoneErr">Please enter a 10-digit mobile number.</div></div>
+        <div class="full"><label for="treatment">Treatment</label>
+          <select id="treatment"><option value="">Choose a treatment</option></select></div>
+        <div><label for="date">Preferred date</label><input id="date" type="date" required><div class="err" id="dateErr">We are closed on Sundays. Please pick another day.</div></div>
+        <div><span class="lbl">Session</span>
+          <div class="seg">
+            <label><input type="radio" name="session" value="Morning" checked><span>Morning</span></label>
+            <label><input type="radio" name="session" value="Evening"><span>Evening</span></label>
+          </div></div>
+        <div class="full"><label for="msg">Anything we should know? (optional)</label><textarea id="msg"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Request appointment →</button>
+          <p class="note">We'll call you to confirm your time.</p></div>
+      </form>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/logo.png" alt="Family Dental Care">
+        <p>Gentle, honest dental care for the whole family in Nashik Road.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="appointment.html">Appointment Booking</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <ul>
+          <li>Trimbak Complex, 9, Shahu Maharaj Path, opp. Bytco Hospital, Rajwada Nagar, Nashik Road, Nashik 422101</li>
+          <li>Mon–Sat · 9:30 am–2:30 pm &amp; 5:30–8:30 pm<br>Senior citizens · 2:30–3:30 pm · Sunday closed</li>
+          <li><a href="tel:+919175951978">091759 51978</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Family Dental Care, Nashik Road</span>
+      <span><a href="https://www.facebook.com/fdcnashik/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/drrajkumarmakhijani" target="_blank" rel="noopener">Instagram</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn btn-primary float-call" href="tel:+919175951978">Call to book · 091759 51978</a>
+<script src="js/main.js"></script>
+<script src="js/appointment.js"></script>
+</body>
+</html>
