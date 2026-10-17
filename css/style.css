@@ -40,14 +40,16 @@ h2{font-size:clamp(2rem,4vw,2.9rem);margin:14px 0 16px}
 
 /* header */
 .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap.nav{width:calc(100% - 64px);max-width:1800px}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px}
 .brand img{height:46px;width:auto}
 .site-nav ul{display:flex;gap:28px;list-style:none;font-size:.95rem;font-weight:500}
 .site-nav a{white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent;transition:.15s}
 .site-nav a:hover{color:var(--green-dark)}
 .site-nav a[aria-current="page"]{color:var(--green-dark);border-bottom-color:var(--green)}
-.nav-cta{display:flex;align-items:center;gap:16px}
-.nav-phone{font-weight:600;font-size:.95rem;white-space:nowrap}
+.nav-cta{display:flex;align-items:center;gap:16px;margin-left:auto}
+.nav-phone{font-weight:600;font-size:.95rem;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.nav-phone svg{color:var(--green-dark)}
 .nav-cta .btn{padding:11px 22px;font-size:.92rem;white-space:nowrap}
 .burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
 .burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px auto;transition:.2s}
@@ -66,7 +68,7 @@ h2{font-size:clamp(2rem,4vw,2.9rem);margin:14px 0 16px}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 
-@media(max-width:1240px){
+@media(max-width:1180px){
   .nav-phone{display:none}
   .site-nav ul{gap:22px}
 }
