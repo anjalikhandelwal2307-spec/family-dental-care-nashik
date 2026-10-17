@@ -2,7 +2,7 @@
 .hero{padding:72px 0 96px;background:radial-gradient(900px 520px at 88% 0,var(--green-soft),transparent 70%),var(--white);overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
 .pin{display:inline-flex;gap:8px;align-items:center;background:var(--green-soft);color:var(--green-dark);padding:8px 16px;border-radius:999px;font-size:.84rem;font-weight:600}
-.hero h1{font-size:clamp(2.5rem,5.4vw,4.3rem);margin:24px 0}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.3rem);margin:0 0 24px}
 .hero h1 em{font-style:normal;color:var(--green)}
 .hero .lead{margin-bottom:34px}
 .hero-photo{position:relative;max-width:440px;margin-left:auto;width:100%}
